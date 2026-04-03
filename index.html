@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandler Portfolio</title>
+
     <style>
         body {
             margin: 0;
@@ -9,19 +12,29 @@
             background: #0f172a;
             color: white;
         }
+
         header {
             text-align: center;
-            padding: 60px;
+            padding: 70px 20px;
             background: linear-gradient(135deg, #6366f1, #06b6d4);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
         section {
-            padding: 40px;
+            padding: 50px 20px;
             max-width: 900px;
             margin: auto;
         }
+
         h2 {
             color: #38bdf8;
+            margin-bottom: 20px;
         }
+
         .card {
             background: #1e293b;
             padding: 20px;
@@ -29,19 +42,34 @@
             border-radius: 12px;
             transition: 0.3s;
         }
+
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
-        a {
-            color: #22c55e;
-            text-decoration: none;
-        }
+
         button {
             background: #22c55e;
             border: none;
             padding: 10px 15px;
             border-radius: 6px;
             cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        a {
+            color: #22c55e;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -56,34 +84,71 @@
 <section>
     <h2>About Me</h2>
     <p>
-        I am passionate about data, machine learning, and solving real-world problems.
-        Currently learning Java and exploring deep learning.
+        I am an aspiring Data Analyst and Machine Learning enthusiast with a strong interest in solving real-world problems using data. 
+        I enjoy building projects, analyzing datasets, and continuously improving my technical skills.
     </p>
 </section>
 
 <section>
     <h2>Skills</h2>
+
     <div class="card">Python | Java | SQL</div>
     <div class="card">Machine Learning | Data Analysis</div>
-    <div class="card">GitHub | VS Code</div>
+    <div class="card">Excel | Power BI | GitHub</div>
+
 </section>
 
 <section>
     <h2>Projects</h2>
 
     <div class="card">
-        <h3>ML / Deep Learning Exploration</h3>
-        <p>Worked with machine learning and deep learning concepts using Python.</p>
-        <a href="https://github.com/Chandl3rBing"><button>View GitHub</button></a>
+        <h3>Drug Interaction Prediction</h3>
+        <p>Machine learning model to predict drug interactions using healthcare datasets.</p>
+        <a href="https://github.com/Chandl3rBing" target="_blank">
+            <button>View Project</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Sales Data Analysis</h3>
+        <p>Analyzed sales data and built dashboards using Excel and Power BI to extract insights.</p>
+        <a href="https://github.com/Chandl3rBing" target="_blank">
+            <button>View Project</button>
+        </a>
     </div>
 
 </section>
 
 <section>
     <h2>Contact</h2>
+
     <p>Email: yourmail@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/Chandl3rBing">My Profile</a></p>
+
+    <p>
+        GitHub: 
+        <a href="https://github.com/Chandl3rBing" target="_blank">
+            Chandl3rBing
+        </a>
+    </p>
+
+    <p>
+        LinkedIn: 
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
+            Your LinkedIn
+        </a>
+    </p>
+
+    <p>
+        <a href="resume.pdf" download>
+            <button>Download Resume</button>
+        </a>
+    </p>
+
 </section>
+
+<footer>
+    <p>© 2026 Chandler | Built with HTML & CSS</p>
+</footer>
 
 </body>
 </html>
