@@ -1,112 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandler | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganesh V | Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #1f2937;
+}
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #6366f1, #06b6d4);
-        }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ff7a18, #ffb347);
+    color: white;
+    animation: fadeIn 1.2s ease-in;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+section {
+    padding: 60px 20px;
+    max-width: 950px;
+    margin: auto;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 950px;
-            margin: auto;
-        }
+/* HEADINGS */
+h2 {
+    color: #ff7a18;
+}
 
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 25px;
-        }
+/* CARDS */
+.card {
+    background: #fff7ed;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    animation: slideUp 0.8s ease;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 14px;
-            transition: 0.3s;
-        }
+.card:hover {
+    transform: translateY(-5px);
+}
 
-        .card:hover {
-            transform: scale(1.04);
-        }
+/* BUTTONS */
+button {
+    background: #ff7a18;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
 
-        .tech {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-top: 10px;
-        }
+button:hover {
+    background: #e85d04;
+}
 
-        button {
-            background: #22c55e;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+/* IMAGE */
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
-        button:hover {
-            transform: scale(1.1);
-        }
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff7ed;
+}
 
-        a {
-            color: #22c55e;
-            text-decoration: none;
-        }
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-        }
-    </style>
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>Ganesh V</h1>
-    <p>Data Analyst | Machine Learning Engineer | Full Stack Developer</p>
+    <p>Data Analyst | Machine Learning | Full Stack</p>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p>
-        I’m a Computer Science student with a strong interest in data, machine learning, and building practical applications. 
-        I enjoy working on projects where I can take an idea, turn it into something functional, and improve it step by step.
+        I’m a Computer Science student interested in data, machine learning, and building real-world applications. 
+        I enjoy working on projects that combine analysis and development.
     </p>
 
     <p>
-        I’ve worked on projects involving data analysis, dashboards, and AI-based systems like drug interaction prediction. 
-        Through these, I’ve gained hands-on experience with tools like Python, SQL, and React, and I’m always looking to learn and build more.
-    </p>
-
-    <p>
-        I’m currently focused on improving my problem-solving skills and looking for opportunities where I can contribute and grow as a developer.
+        I’ve worked on dashboards, AI-based systems, and web applications using Python, SQL, and React. 
+        I’m always looking to improve my skills by building practical solutions.
     </p>
 </section>
 
@@ -114,8 +125,8 @@
     <h2>Skills</h2>
 
     <div class="card">Python | Java | SQL</div>
-    <div class="card">Machine Learning | Data Analysis | Deep Learning</div>
-    <div class="card">Flask | React.js | GitHub</div>
+    <div class="card">Machine Learning | Data Analysis</div>
+    <div class="card">Flask | React.js</div>
     <div class="card">Excel | Power BI</div>
 
 </section>
@@ -124,20 +135,15 @@
     <h2>Projects</h2>
 
     <div class="card">
-        <h3>GraphRxInsight — Drug Interaction Prediction System</h3>
+        <h3>GraphRxInsight</h3>
 
         <p>
-            Developed an AI-powered system to predict drug–drug interactions using multi-source biomedical data. 
-            Built an end-to-end solution integrating machine learning models with a Flask backend and React frontend.
+            AI-based system to predict drug interactions using machine learning and biomedical data.
+            Achieved ~94% accuracy with strong model performance.
         </p>
 
-        <p>
-            Achieved ~94% accuracy and high F1-score (~0.96) through advanced feature engineering and model optimization.
-        </p>
-
-        <p class="tech">
-            Tech: Python, Random Forest, XGBoost, Neural Networks, Flask, React
-        </p>
+        <!-- ADD YOUR IMAGE -->
+        <img src="project.png">
 
         <a href="https://github.com/Chandl3rBing/GraphRxInsight" target="_blank">
             <button>View Project</button>
@@ -148,11 +154,6 @@
 
 <section>
     <h2>Contact</h2>
-    <p>
-    <a href="resume.pdf" target="_blank">
-        <button>View Resume</button>
-    </a>
-</p>
 
     <p>Email: yourmail@gmail.com</p>
 
@@ -164,22 +165,15 @@
     </p>
 
     <p>
-        LinkedIn: 
-        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
-            Your LinkedIn
-        </a>
-    </p>
-
-    <p>
-        <a href="resume.pdf" download>
-            <button>Download Resume</button>
+        <a href="resume.pdf" target="_blank">
+            <button>View Resume</button>
         </a>
     </p>
 
 </section>
 
 <footer>
-    <p>© 2026 Chandler | Portfolio</p>
+    <p>© 2026 Ganesh V</p>
 </footer>
 
 </body>
