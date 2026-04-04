@@ -6,9 +6,7 @@
 <title>Ganesh V | Portfolio</title>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -25,7 +23,6 @@ nav {
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
 }
 
 nav a {
@@ -43,16 +40,12 @@ header {
     color: white;
 }
 
-header h1 {
-    font-size: 45px;
-}
-
 .typing {
     font-size: 20px;
     margin-top: 10px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     padding: 70px 20px;
     max-width: 900px;
@@ -63,7 +56,7 @@ h2 {
     color: #ff7a18;
 }
 
-/* CARDS */
+/* CARD */
 .card {
     background: #fff7ed;
     padding: 25px;
@@ -97,13 +90,6 @@ button:hover {
     background: #e85d04;
 }
 
-/* IMAGE */
-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
@@ -132,9 +118,21 @@ footer {
 <!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
+
     <p>
-        I’m a Computer Science student interested in data, machine learning, and building real-world applications.
+        I’m a Computer Science student with a strong interest in data, machine learning, and building practical applications. 
+        I enjoy working on projects where I can take an idea, turn it into something functional, and improve it step by step.
     </p>
+
+    <p>
+        I’ve worked on projects involving data analysis, dashboards, and AI-based systems like drug interaction prediction. 
+        Through these, I’ve gained hands-on experience with tools like Python, SQL, and React.
+    </p>
+
+    <p>
+        I’m currently focused on improving my problem-solving skills and looking for opportunities where I can contribute and grow.
+    </p>
+
 </section>
 
 <!-- SKILLS -->
@@ -144,18 +142,27 @@ footer {
     <div class="card">Python | SQL | Java</div>
     <div class="card">Machine Learning | Data Analysis</div>
     <div class="card">Flask | React</div>
+    <div class="card">Power BI | Excel</div>
+
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECT -->
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
-        <h3>GraphRxInsight</h3>
-        <p>AI-based drug interaction prediction system with 94% accuracy.</p>
-        <img src="project.png">
-        <br>
-        <a href="https://github.com/Chandl3rBing/GraphRxInsight">
+        <h3>GraphRxInsight — Drug Interaction Prediction System</h3>
+
+        <p>
+            Developed an AI-based system to predict drug–drug interactions using multi-source biomedical data. 
+            Built an end-to-end solution using machine learning models with Flask backend and React frontend.
+        </p>
+
+        <p>
+            Achieved ~94% accuracy and ~0.96 F1-score through feature engineering and model optimization.
+        </p>
+
+        <a href="https://github.com/Chandl3rBing/GraphRxInsight" target="_blank">
             <button>View Project</button>
         </a>
     </div>
@@ -168,22 +175,36 @@ footer {
 
     <p>Email: yourmail@gmail.com</p>
 
-    <a href="resume.pdf">
-        <button>View Resume</button>
-    </a>
+    <p>
+        GitHub:
+        <a href="https://github.com/Chandl3rBing" target="_blank">
+            Chandl3rBing
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
+            Your LinkedIn
+        </a>
+    </p>
+
+    <p>
+        <a href="resume.pdf" target="_blank">
+            <button>View Resume</button>
+        </a>
+    </p>
+
 </section>
 
 <footer>
     <p>© 2026 Ganesh V</p>
 </footer>
 
-<!-- JS -->
 <script>
-// Typing animation
+// typing animation
 const text = ["Data Analyst", "ML Enthusiast", "Full Stack Developer"];
-let i = 0, j = 0;
-let currentText = "";
-let isDeleting = false;
+let i = 0, j = 0, currentText = "", isDeleting = false;
 
 function type() {
     currentText = text[i];
@@ -209,10 +230,9 @@ function type() {
 
     setTimeout(type, isDeleting ? 50 : 100);
 }
-
 type();
 
-// Scroll animation
+// scroll animation
 const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", () => {
