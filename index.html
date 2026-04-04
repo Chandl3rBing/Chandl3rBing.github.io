@@ -29,7 +29,7 @@ nav {
 }
 
 nav a {
-    margin: 0 12px;
+    margin: 0 10px;
     text-decoration: none;
     color: #2c2c2c;
     font-weight: 500;
@@ -44,9 +44,9 @@ nav a:hover {
 .hero {
     height: 90vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 .big-text {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 600;
     max-width: 750px;
     margin: auto;
@@ -120,6 +120,11 @@ button:hover {
     transform: scale(1.2);
 }
 
+/* HEADINGS */
+h3 {
+    color: #d97706;
+}
+
 /* FADE */
 .fade {
     opacity: 0;
@@ -140,6 +145,9 @@ button:hover {
 <nav>
     <a href="#about">About</a>
     <a href="#what">What I Do</a>
+    <a href="#skills">Skills</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#awards">Awards</a>
     <a href="#project">Project</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
@@ -148,7 +156,7 @@ button:hover {
 <!-- HERO -->
 <div class="hero">
     <h1>Ganesh V</h1>
-    <p>Data Analytics. Machine Learning. Real Systems.</p>
+    <p>Data. Machine Learning. Real Systems.</p>
 </div>
 
 <!-- ABOUT -->
@@ -181,6 +189,52 @@ button:hover {
         <p>• Build machine learning models</p>
         <p>• Develop backend systems (Flask)</p>
         <p>• Create frontend interfaces (React)</p>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section fade">
+    <h2>Skills</h2>
+
+    <div style="text-align:left; max-width:700px; margin:auto; line-height:1.8;">
+        <h3>Hard Skills</h3>
+        <p><b>Programming:</b> Python, Java, C/C++</p>
+        <p><b>Web Development:</b> HTML, CSS, React, TypeScript</p>
+        <p><b>Data & Tools:</b> Power BI, Excel, SQL, Oracle</p>
+        <p><b>Core Areas:</b> Data Analysis, Machine Learning, UI/UX Design</p>
+
+        <br>
+
+        <h3>Soft Skills</h3>
+        <p>Communication, Teamwork, Problem Solving, Analytical Thinking, Time Management, Adaptability</p>
+
+        <br>
+
+        <h3>Languages Spoken</h3>
+        <p>English, Tamil, Malayalam, French, Telugu</p>
+    </div>
+</div>
+
+<!-- HOBBIES -->
+<div id="hobbies" class="section fade">
+    <h2>Hobbies</h2>
+    <p style="max-width:700px; margin:auto; color:#555;">
+        I enjoy playing chess, exploring new technologies, and working on UI designs. 
+        I like analyzing patterns and strategies, which reflects in both technical and personal areas.
+    </p>
+</div>
+
+<!-- AWARDS -->
+<div id="awards" class="section fade">
+    <h2>Awards & Certifications</h2>
+
+    <div style="line-height:2;">
+        <p>• AI & ML Training Certification</p>
+        <p>• IBM UI/UX Design Certification</p>
+        <p>• IBM Python with SQL Certification</p>
+        <p>• A2 French Certification</p>
+        <p>• State Level Chess Championship – 2nd Place</p>
+        <p>• Typewriting Certification</p>
     </div>
 </div>
 
