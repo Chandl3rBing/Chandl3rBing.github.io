@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandler Portfolio</title>
+    <title>Chandler | Portfolio</title>
 
     <style>
         body {
@@ -15,31 +15,36 @@
 
         header {
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
             background: linear-gradient(135deg, #6366f1, #06b6d4);
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
         }
 
         section {
-            padding: 50px 20px;
-            max-width: 900px;
+            padding: 60px 20px;
+            max-width: 950px;
             margin: auto;
         }
 
         h2 {
             color: #38bdf8;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .card {
             background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 14px;
             transition: 0.3s;
         }
 
@@ -47,13 +52,20 @@
             transform: scale(1.04);
         }
 
+        .tech {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
         button {
             background: #22c55e;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 18px;
             border-radius: 6px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-weight: bold;
         }
 
         button:hover {
@@ -67,7 +79,7 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: #020617;
             color: #94a3b8;
         }
@@ -78,14 +90,14 @@
 
 <header>
     <h1>Chandler</h1>
-    <p>Aspiring Data Analyst | ML Enthusiast | Developer</p>
+    <p>Data Analyst | Machine Learning Engineer | Full Stack Developer</p>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p>
-        I am an aspiring Data Analyst and Machine Learning enthusiast with a strong interest in solving real-world problems using data. 
-        I enjoy building projects, analyzing datasets, and continuously improving my technical skills.
+        I am an aspiring Data Analyst and Machine Learning Engineer passionate about solving real-world problems using data and AI. 
+        I build end-to-end systems combining machine learning models with scalable web applications.
     </p>
 </section>
 
@@ -93,8 +105,9 @@
     <h2>Skills</h2>
 
     <div class="card">Python | Java | SQL</div>
-    <div class="card">Machine Learning | Data Analysis</div>
-    <div class="card">Excel | Power BI | GitHub</div>
+    <div class="card">Machine Learning | Data Analysis | Deep Learning</div>
+    <div class="card">Flask | React.js | GitHub</div>
+    <div class="card">Excel | Power BI</div>
 
 </section>
 
@@ -102,17 +115,22 @@
     <h2>Projects</h2>
 
     <div class="card">
-        <h3>Drug Interaction Prediction</h3>
-        <p>Machine learning model to predict drug interactions using healthcare datasets.</p>
-        <a href="https://github.com/Chandl3rBing" target="_blank">
-            <button>View Project</button>
-        </a>
-    </div>
+        <h3>GraphRxInsight — Drug Interaction Prediction System</h3>
 
-    <div class="card">
-        <h3>Sales Data Analysis</h3>
-        <p>Analyzed sales data and built dashboards using Excel and Power BI to extract insights.</p>
-        <a href="https://github.com/Chandl3rBing" target="_blank">
+        <p>
+            Developed an AI-powered system to predict drug–drug interactions using multi-source biomedical data. 
+            Built an end-to-end solution integrating machine learning models with a Flask backend and React frontend.
+        </p>
+
+        <p>
+            Achieved ~94% accuracy and high F1-score (~0.96) through advanced feature engineering and model optimization.
+        </p>
+
+        <p class="tech">
+            Tech: Python, Random Forest, XGBoost, Neural Networks, Flask, React
+        </p>
+
+        <a href="https://github.com/Chandl3rBing/GraphRxInsight" target="_blank">
             <button>View Project</button>
         </a>
     </div>
@@ -121,8 +139,13 @@
 
 <section>
     <h2>Contact</h2>
+    <p>
+    <a href="resume.pdf" target="_blank">
+        <button>View Resume</button>
+    </a>
+</p>
 
-    <p>Email: ganeshvenkat19@gmail.com</p>
+    <p>Email: yourmail@gmail.com</p>
 
     <p>
         GitHub: 
@@ -133,7 +156,7 @@
 
     <p>
         LinkedIn: 
-        <a href="https://www.linkedin.com/in/ganesh-venkat-8381141bb/" target="_blank">
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
             Your LinkedIn
         </a>
     </p>
@@ -147,7 +170,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Chandler | Built with HTML & CSS</p>
+    <p>© 2026 Chandler | Portfolio</p>
 </footer>
 
 </body>
