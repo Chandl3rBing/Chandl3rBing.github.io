@@ -6,6 +6,10 @@
 <title>Ganesh V | Portfolio</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -13,27 +17,48 @@ body {
     color: #1f2937;
 }
 
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ff7a18;
+    font-weight: bold;
+}
+
 /* HEADER */
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #ff7a18, #ffb347);
     color: white;
-    animation: fadeIn 1.2s ease-in;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 42px;
+    font-size: 45px;
 }
 
+.typing {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* SECTIONS */
 section {
-    padding: 60px 20px;
-    max-width: 950px;
+    padding: 70px 20px;
+    max-width: 900px;
     margin: auto;
 }
 
-/* HEADINGS */
 h2 {
     color: #ff7a18;
 }
@@ -43,17 +68,22 @@ h2 {
     background: #fff7ed;
     padding: 25px;
     margin: 20px 0;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
     transition: 0.3s;
-    animation: slideUp 0.8s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
 }
 
-/* BUTTONS */
+/* BUTTON */
 button {
     background: #ff7a18;
     color: white;
@@ -61,7 +91,6 @@ button {
     padding: 10px 18px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 button:hover {
@@ -81,100 +110,120 @@ footer {
     padding: 20px;
     background: #fff7ed;
 }
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
 <header>
     <h1>Ganesh V</h1>
-    <p>Data Analyst | Machine Learning | Full Stack</p>
+    <div class="typing" id="typing"></div>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
     <h2>About Me</h2>
     <p>
-        I’m a Computer Science student interested in data, machine learning, and building real-world applications. 
-        I enjoy working on projects that combine analysis and development.
-    </p>
-
-    <p>
-        I’ve worked on dashboards, AI-based systems, and web applications using Python, SQL, and React. 
-        I’m always looking to improve my skills by building practical solutions.
+        I’m a Computer Science student interested in data, machine learning, and building real-world applications.
     </p>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
     <h2>Skills</h2>
 
-    <div class="card">Python | Java | SQL</div>
+    <div class="card">Python | SQL | Java</div>
     <div class="card">Machine Learning | Data Analysis</div>
-    <div class="card">Flask | React.js</div>
-    <div class="card">Excel | Power BI</div>
-
+    <div class="card">Flask | React</div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>GraphRxInsight</h3>
-
-        <p>
-            AI-based system to predict drug interactions using machine learning and biomedical data.
-            Achieved ~94% accuracy with strong model performance.
-        </p>
-
-        <!-- ADD YOUR IMAGE -->
+        <p>AI-based drug interaction prediction system with 94% accuracy.</p>
         <img src="project.png">
-
-        <a href="https://github.com/Chandl3rBing/GraphRxInsight" target="_blank">
+        <br>
+        <a href="https://github.com/Chandl3rBing/GraphRxInsight">
             <button>View Project</button>
         </a>
     </div>
 
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
     <h2>Contact</h2>
 
     <p>Email: yourmail@gmail.com</p>
 
-    <p>
-        GitHub: 
-        <a href="https://github.com/Chandl3rBing" target="_blank">
-            Chandl3rBing
-        </a>
-    </p>
-
-    <p>
-        <a href="resume.pdf" target="_blank">
-            <button>View Resume</button>
-        </a>
-    </p>
-
+    <a href="resume.pdf">
+        <button>View Resume</button>
+    </a>
 </section>
 
 <footer>
     <p>© 2026 Ganesh V</p>
 </footer>
+
+<!-- JS -->
+<script>
+// Typing animation
+const text = ["Data Analyst", "ML Enthusiast", "Full Stack Developer"];
+let i = 0, j = 0;
+let currentText = "";
+let isDeleting = false;
+
+function type() {
+    currentText = text[i];
+
+    if (!isDeleting) {
+        document.getElementById("typing").innerHTML =
+            currentText.substring(0, j++);
+    } else {
+        document.getElementById("typing").innerHTML =
+            currentText.substring(0, j--);
+    }
+
+    if (j === currentText.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+        return;
+    }
+
+    if (j === 0) {
+        isDeleting = false;
+        i = (i + 1) % text.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+
+// Scroll animation
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+    cards.forEach(card => {
+        const position = card.getBoundingClientRect().top;
+        if (position < window.innerHeight - 50) {
+            card.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
