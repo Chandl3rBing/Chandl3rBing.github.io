@@ -3,98 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ganesh V | Portfolio</title>
+<title>Ganesh V</title>
 
 <style>
-html { scroll-behavior: smooth; }
-
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #ffffff;
-    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: white;
+    color: black;
 }
 
 /* NAVBAR */
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: white;
+    width: 100%;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #ff7a18;
-    font-weight: bold;
+    color: black;
+    font-weight: 500;
 }
 
-/* HEADER */
-header {
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #ff7a18, #ffb347);
-    color: white;
 }
 
-.typing {
-    font-size: 20px;
-    margin-top: 10px;
+.hero h1 {
+    font-size: 70px;
+    margin: 0;
 }
 
-/* SECTION */
-section {
-    padding: 70px 20px;
-    max-width: 900px;
+.hero p {
+    font-size: 22px;
+    color: gray;
+}
+
+/* SECTIONS */
+.section {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.big-text {
+    font-size: 42px;
+    font-weight: 600;
+    max-width: 800px;
     margin: auto;
+    line-height: 1.4;
 }
 
-h2 {
-    color: #ff7a18;
+/* PROJECT */
+.project {
+    padding: 150px 20px;
+    background: #f5f5f7;
 }
 
-/* CARD */
-.card {
-    background: #fff7ed;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    transition: 0.3s;
-    opacity: 0;
-    transform: translateY(40px);
+.project h2 {
+    font-size: 42px;
 }
 
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.card:hover {
-    transform: scale(1.03);
+.project p {
+    max-width: 650px;
+    margin: auto;
+    color: #555;
+    font-size: 18px;
 }
 
 /* BUTTON */
 button {
-    background: #ff7a18;
-    color: white;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 30px;
     border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
+    background: black;
+    color: white;
     cursor: pointer;
+    font-size: 14px;
 }
 
 button:hover {
-    background: #e85d04;
+    opacity: 0.8;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #fff7ed;
+/* RESUME */
+.resume {
+    padding: 120px 20px;
+    background: white;
+}
+
+/* FADE + SLIDE */
+.fade {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
 </head>
@@ -104,142 +124,70 @@ footer {
 <!-- NAVBAR -->
 <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#project">Project</a>
+    <a href="#resume">Resume</a>
 </nav>
 
-<!-- HEADER -->
-<header>
+<!-- HERO -->
+<div class="hero">
     <h1>Ganesh V</h1>
-    <div class="typing" id="typing"></div>
-</header>
+    <p>Data. Machine Learning. Real Systems.</p>
+</div>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-
-    <p>
-        I’m a Computer Science student with a strong interest in data, machine learning, and building practical applications. 
-        I enjoy working on projects where I can take an idea, turn it into something functional, and improve it step by step.
-    </p>
-
-    <p>
-        I’ve worked on projects involving data analysis, dashboards, and AI-based systems like drug interaction prediction. 
-        Through these, I’ve gained hands-on experience with tools like Python, SQL, and React.
-    </p>
-
-    <p>
-        I’m currently focused on improving my problem-solving skills and looking for opportunities where I can contribute and grow.
-    </p>
-
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="card">Python | SQL | Java</div>
-    <div class="card">Machine Learning | Data Analysis</div>
-    <div class="card">Flask | React</div>
-    <div class="card">Power BI | Excel</div>
-
-</section>
+<div id="about" class="section fade">
+    <div class="big-text">
+        I build systems that turn data into real-world solutions. 
+        From dashboards to AI models, I focus on creating things that actually work and deliver value.
+    </div>
+</div>
 
 <!-- PROJECT -->
-<section id="projects">
-    <h2>Projects</h2>
+<div id="project" class="project fade">
+    <h2>GraphRxInsight</h2>
 
-    <div class="card">
-        <h3>GraphRxInsight — Drug Interaction Prediction System</h3>
+    <p>
+        An AI-powered drug interaction prediction system built using multi-source biomedical data.
+        Achieved ~94% accuracy and deployed as a full-stack application using Flask and React.
+    </p>
 
-        <p>
-            Developed an AI-based system to predict drug–drug interactions using multi-source biomedical data. 
-            Built an end-to-end solution using machine learning models with Flask backend and React frontend.
-        </p>
+    <a href="https://github.com/Chandl3rBing/GraphRxInsight">
+        <button>View Project</button>
+    </a>
+</div>
 
-        <p>
-            Achieved ~94% accuracy and ~0.96 F1-score through feature engineering and model optimization.
-        </p>
+<!-- RESUME -->
+<div id="resume" class="resume fade">
+    <h2>Resume</h2>
 
-        <a href="https://github.com/Chandl3rBing/GraphRxInsight" target="_blank">
-            <button>View Project</button>
-        </a>
-    </div>
+    <p style="color:gray;">Download or view my resume</p>
 
-</section>
+    <a href="resume.pdf" target="_blank">
+        <button>View Resume</button>
+    </a>
+
+    <br>
+
+    <a href="resume.pdf" download>
+        <button>Download Resume</button>
+    </a>
+</div>
 
 <!-- CONTACT -->
-<section id="contact">
+<div class="section fade">
     <h2>Contact</h2>
-
     <p>Email: yourmail@gmail.com</p>
-
-    <p>
-        GitHub:
-        <a href="https://github.com/Chandl3rBing" target="_blank">
-            Chandl3rBing
-        </a>
-    </p>
-
-    <p>
-        LinkedIn:
-        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
-            Your LinkedIn
-        </a>
-    </p>
-
-    <p>
-        <a href="resume.pdf" target="_blank">
-            <button>View Resume</button>
-        </a>
-    </p>
-
-</section>
-
-<footer>
-    <p>© 2026 Ganesh V</p>
-</footer>
+</div>
 
 <script>
-// typing animation
-const text = ["Data Analyst", "ML Enthusiast", "Full Stack Developer"];
-let i = 0, j = 0, currentText = "", isDeleting = false;
-
-function type() {
-    currentText = text[i];
-
-    if (!isDeleting) {
-        document.getElementById("typing").innerHTML =
-            currentText.substring(0, j++);
-    } else {
-        document.getElementById("typing").innerHTML =
-            currentText.substring(0, j--);
-    }
-
-    if (j === currentText.length) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-        return;
-    }
-
-    if (j === 0) {
-        isDeleting = false;
-        i = (i + 1) % text.length;
-    }
-
-    setTimeout(type, isDeleting ? 50 : 100);
-}
-type();
-
 // scroll animation
-const cards = document.querySelectorAll(".card");
+const elements = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {
-    cards.forEach(card => {
-        const position = card.getBoundingClientRect().top;
-        if (position < window.innerHeight - 50) {
-            card.classList.add("show");
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("show");
         }
     });
 });
