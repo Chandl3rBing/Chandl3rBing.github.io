@@ -9,8 +9,10 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: white;
     color: black;
+
+    /* SUBTLE BACKGROUND */
+    background: linear-gradient(white, #f5f5f7);
 }
 
 /* NAVBAR */
@@ -22,7 +24,6 @@ nav {
     text-align: center;
     background: rgba(255,255,255,0.8);
     backdrop-filter: blur(10px);
-    z-index: 1000;
 }
 
 nav a {
@@ -52,14 +53,14 @@ nav a {
     color: gray;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 120px 20px;
     text-align: center;
 }
 
 .big-text {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 600;
     max-width: 800px;
     margin: auto;
@@ -68,19 +69,18 @@ nav a {
 
 /* PROJECT */
 .project {
-    padding: 150px 20px;
+    padding: 140px 20px;
     background: #f5f5f7;
 }
 
 .project h2 {
-    font-size: 42px;
+    font-size: 40px;
 }
 
 .project p {
     max-width: 650px;
     margin: auto;
     color: #555;
-    font-size: 18px;
 }
 
 /* BUTTON */
@@ -92,20 +92,17 @@ button {
     background: black;
     color: white;
     cursor: pointer;
-    font-size: 14px;
 }
 
-button:hover {
-    opacity: 0.8;
+/* SOCIAL LINKS */
+.socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 
-/* RESUME */
-.resume {
-    padding: 120px 20px;
-    background: white;
-}
-
-/* FADE + SLIDE */
+/* FADE */
 .fade {
     opacity: 0;
     transform: translateY(60px);
@@ -126,6 +123,7 @@ button:hover {
     <a href="#about">About</a>
     <a href="#project">Project</a>
     <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
@@ -138,7 +136,7 @@ button:hover {
 <div id="about" class="section fade">
     <div class="big-text">
         I build systems that turn data into real-world solutions. 
-        From dashboards to AI models, I focus on creating things that actually work and deliver value.
+        From dashboards to AI models, I focus on creating things that actually work.
     </div>
 </div>
 
@@ -147,8 +145,8 @@ button:hover {
     <h2>GraphRxInsight</h2>
 
     <p>
-        An AI-powered drug interaction prediction system built using multi-source biomedical data.
-        Achieved ~94% accuracy and deployed as a full-stack application using Flask and React.
+        AI-powered drug interaction prediction system with ~94% accuracy.
+        Built using machine learning with Flask backend and React frontend.
     </p>
 
     <a href="https://github.com/Chandl3rBing/GraphRxInsight">
@@ -157,30 +155,35 @@ button:hover {
 </div>
 
 <!-- RESUME -->
-<div id="resume" class="resume fade">
+<div id="resume" class="section fade">
     <h2>Resume</h2>
 
-    <p style="color:gray;">Download or view my resume</p>
-
     <a href="Ganesh_V_Updated.pdf" target="_blank">
-    <button>View Resume</button>
-</a>
+        <button>View Resume</button>
+    </a>
 
-<br><br>
+    <br><br>
 
-<a href="Ganesh_V_Updated.pdf" download>
-    <button>Download Resume</button>
-</a>
+    <a href="Ganesh_V_Updated.pdf" download>
+        <button>Download Resume</button>
+    </a>
 </div>
 
 <!-- CONTACT -->
-<div class="section fade">
+<div id="contact" class="section fade">
     <h2>Contact</h2>
+
     <p>Email: yourmail@gmail.com</p>
+    <p>Phone: 8807402413</p>
+
+    <div class="socials">
+        <a href="https://github.com/Chandl3rBing" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">LinkedIn</a> |
+        <a href="https://www.instagram.com/_chandl3r_bing_?igsh=MXJyZXdqY3UxZGxpaw%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    </div>
 </div>
 
 <script>
-// scroll animation
 const elements = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {
