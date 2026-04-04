@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganesh V</title>
 
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: black;
-
-    /* SUBTLE BACKGROUND */
     background: linear-gradient(white, #f5f5f7);
+    color: black;
 }
 
 /* NAVBAR */
@@ -22,7 +23,7 @@ nav {
     width: 100%;
     padding: 15px;
     text-align: center;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
 }
 
@@ -31,6 +32,11 @@ nav a {
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7a18;
 }
 
 /* HERO */
@@ -46,11 +52,12 @@ nav a {
 .hero h1 {
     font-size: 70px;
     margin: 0;
+    letter-spacing: -1px;
 }
 
 .hero p {
     font-size: 22px;
-    color: gray;
+    color: #666;
 }
 
 /* SECTION */
@@ -74,7 +81,7 @@ nav a {
 }
 
 .project h2 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .project p {
@@ -86,20 +93,35 @@ nav a {
 /* BUTTON */
 button {
     margin-top: 20px;
-    padding: 12px 24px;
+    padding: 12px 26px;
     border-radius: 30px;
     border: none;
     background: black;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* SOCIAL LINKS */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 20px;
+}
+
 .socials a {
-    margin: 0 10px;
-    text-decoration: none;
+    margin: 0 12px;
+    font-size: 22px;
     color: black;
-    font-weight: 500;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #ff7a18;
+    transform: scale(1.2);
 }
 
 /* FADE */
@@ -118,7 +140,6 @@ button {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <a href="#about">About</a>
     <a href="#project">Project</a>
@@ -136,7 +157,7 @@ button {
 <div id="about" class="section fade">
     <div class="big-text">
         I build systems that turn data into real-world solutions. 
-        From dashboards to AI models, I focus on creating things that actually work.
+        From dashboards to AI models, I focus on creating things that actually work and deliver value.
     </div>
 </div>
 
@@ -145,11 +166,11 @@ button {
     <h2>GraphRxInsight</h2>
 
     <p>
-        AI-powered drug interaction prediction system with ~94% accuracy.
-        Built using machine learning with Flask backend and React frontend.
+        Built an AI-based drug interaction prediction system using machine learning and biomedical data. 
+        Achieved ~94% accuracy with full-stack deployment using Flask and React.
     </p>
 
-    <a href="https://github.com/Chandl3rBing/GraphRxInsight">
+    <a href="https://github.com/Chandl3rBing/GraphRxInsight-Dev1" target="_blank">
         <button>View Project</button>
     </a>
 </div>
@@ -177,9 +198,9 @@ button {
     <p>Phone: 8807402413</p>
 
     <div class="socials">
-        <a href="https://github.com/Chandl3rBing" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">LinkedIn</a> |
-        <a href="https://www.instagram.com/_chandl3r_bing_?igsh=MXJyZXdqY3UxZGxpaw%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        <a href="https://github.com/Chandl3rBing"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YOURPROFILE"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_chandl3r_bing_?igsh=MXJyZXdqY3UxZGxpaw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
     </div>
 </div>
 
